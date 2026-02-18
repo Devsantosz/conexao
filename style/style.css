@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+:root{
+    --color01:#591b97;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(-45deg, var(--color01), rgb(0, 0, 0), var(--color01));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+main{
+    color: white;
+    height: calc(100vh - 40px);
+    display: grid;
+
+    grid-template-columns: 10px 1fr 10px;
+
+    justify-items: center;
+    align-items: center;
+}
+
+div{
+    grid-column: 2;
+    max-width: 80%;
+    
+
+    background: transparent;
+}
+
+#perfil{
+    text-align: center;
+}
+
+#perfil img{
+    border-radius: 50%;
+    width: 40%;
+    padding: 2px;
+    margin: 5px;
+    outline: 2px solid var(--color01);
+
+    animation: perf 3s ease-in-out infinite;
+}
+
+@keyframes perf{
+    0%{
+        box-shadow: 0 0 0 0 #591b972d;
+    }
+
+    70%{
+        box-shadow: 0 0 0 10px #591b977e;
+    }
+
+    100%{
+        box-shadow: 0 0 0 0 #591b971a;
+    }
+}
+
+#perfil h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: var(--color01);
+    padding: 5px;
+}
+
+#perfil h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#perfil p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+#py{
+    color: yellow;
+    text-shadow: 0px 0px 15px yellow;
+}
+
+main a{
+    grid-column: 2;
+    width: 70%;
+    justify-items: center;
+
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--color01);
+    box-shadow: 0px 0px 8px var(--color01);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+
+    padding: 20px;
+}
+
+
+main a:hover{
+    background-color: #591b9750;
+    transform: translateY(-5px) ;
+    transition: 0.4s;
+}
+
+footer p{
+    color: var(--color01);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+    padding: 10px;
+}
+
+footer p a{
+    color: var(--color01);
+    text-decoration: none;
+}
+
+footer p a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px){
+
+    #perfil img{
+        width: 20%;
+        transition: ease 1s;
+    }
+
+    a{
+        transition: ease 1s;
+        max-width: 30%;
+    }
+}
+
+
