@@ -41,22 +41,49 @@ main{
     padding: 10px;
 }
 
-div{
+#perfil, .link-container{
     grid-column: 2;
     max-width: 80%;
     
-    transition: ease 1s;
+   
     background: transparent;
 
     opacity: 0;
-    transform: translatex(-12px);
-    animation: chegada 1.5s ease forwards;
+
+    transition: ease;
+    animation: chegada 4s ease forwards;
+    position: relative;
 }
 
 @keyframes chegada {
   to {
     opacity: 1;
-    transform: translatex(0);
+  }
+}
+
+#logo{
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+#logo img{
+    filter: drop-shadow(0 0 5px #fcf9ff);
+    
+
+    transition: ease;
+    animation: inicio 0.3s ease-in-out forwards;
+}
+
+@keyframes inicio {
+  to {
+    position: relative;
+    opacity: 0;
   }
 }
 
@@ -164,6 +191,11 @@ footer p a:hover{
 }
 
 @media screen and (min-width: 768px){
+
+    #logo{
+        max-width: 50%;
+    
+    }
 
     #perfil img{
         width: 30%;
